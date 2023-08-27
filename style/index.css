@@ -6,7 +6,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url("Images/Background.jpg");
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url("Images\Background.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -74,33 +74,31 @@ nav img{
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing 5.5s steps(200, end) forwards;
+    animation: typing 5.5s steps(150, end) forwards;
 }
 .typed2 {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing 2s steps(200, end) forwards;
+    animation: typing 2s steps(150, end) forwards;
     animation-delay: 4s;
 } 
 .typed3 {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing 2s steps(200, end) forwards;
+    animation: typing 2s steps(150, end) forwards;
     animation-delay: 6.5s;
 }
 .typed4 {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing 5s steps(300, end) forwards;
+    animation: typing 3s steps(150, end) forwards;
     animation-delay: 9s;
 }
 @keyframes typing {
     from { width: 0 }
-    to { width: 10%}
-    to {width: 25%}
     to { width: 100% }
 }
 
