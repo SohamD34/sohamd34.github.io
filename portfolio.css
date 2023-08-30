@@ -77,7 +77,8 @@ nav img{
 
 .text-island {
     flex-basis: 50%px;
-    background-color: #fff;
+    /* background-image:"Images/tile-bg.jpg"; */
+    background-color: rgb(243, 243, 241);
     padding: 20px;
     margin: 5px;
     border-radius: 5px;
