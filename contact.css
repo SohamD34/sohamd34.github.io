@@ -1,7 +1,8 @@
 *{
     margin:0;
     padding:0;
-    font-family: 'Roboto Condensed', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    /* font-family: 'Dancing Script', cursive; */
 }
 .header{
     min-height: 100vh;
@@ -31,6 +32,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .nav-links ul li{
     list-style: none;
@@ -58,63 +60,27 @@ nav img{
 
 .contact_title{
     color:white;
-    font-size: x-large;
+    font-size: 25px;
     text-align: left;
-    margin-left:100px;
+    margin-top: 25px;
+    margin-left:150px;
+    font-family: 'Dancing Script', cursive;
 }
 .contact-text{
     color:white;
     text-align:left;
-    margin-top: 15px;
-    margin-left: 100px;
-    font-size: 15px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 11s steps(150, end) forwards;
-}
-.contact-text2{
-    color:white;
-    text-align:left;
-    font-size: 15px;
-    margin-left: 100px;
-    margin-top: 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 7s steps(150, end) 13s forwards;
-}
-.contact-text3{
-    color:white;
-    text-align:left;
-    font-size: 15px;
-    margin-left: 100px;
-    margin-top: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 7s steps(150, end) 15s forwards;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    margin-top: 35px;
+    margin-left: 780px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .fixed-side-bar{
     position: fixed;
-    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 5px;
     height: 5px;
     width: 5px;
-    margin-left: 0px;
-    opacity: 15%;
-}
-.fixed-side-bar:hover{
-    position: fixed;
-    margin-left: 0px;
-    margin-top: 5px;
-    height: 5px;
-    width: 5px;
-    margin-left: 0px;
-    opacity: 80%;
+    margin-left: 97%;
+    opacity: 75%;
 }

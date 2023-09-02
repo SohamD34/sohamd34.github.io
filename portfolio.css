@@ -57,14 +57,53 @@ nav img{
     width: 100%;
 }
 
+.title{
+    display: block;
+    font-size: 25px;
+    color:white;
+    text-align: center;
+}
+
+.decor-row{
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.decorative-element1 {
+    background: linear-gradient(to right, #f2f2f2, #ffffff);
+    border: 0.1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 0.1px;
+    margin-top: -15px;
+    margin-left: 667px;
+}
+
+.decorative-element1:hover{
+    animation: extend 1s forwards;
+}
+
+@keyframes extend{
+    0%{
+        margin-left: 700px;
+        width: 200px;
+    }
+    100%{
+        margin-left: 225px;
+        width: 1125px;
+    }
+}
+
 
 /* Text islands to show the works */
 .container-row1 {
     display: flex;
     width: 1400px;
     height: 500px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 70px;
+    margin-bottom: -120px;
 }
 
 .container-row2 {
@@ -76,7 +115,7 @@ nav img{
 }
 
 .text-island {
-    flex-basis: 50%px;
+    flex-basis: 50%;
     /* background-image:"Images/tile-bg.jpg"; */
     background-color: rgb(243, 243, 241);
     padding: 20px;
