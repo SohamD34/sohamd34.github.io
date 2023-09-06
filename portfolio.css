@@ -117,13 +117,14 @@ nav img{
 .text-island {
     flex-basis: 50%;
     /* background-image:"Images/tile-bg.jpg"; */
-    background-color: rgb(243, 243, 241);
+    background-color: rgb(255, 255, 247);
     padding: 20px;
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 300px;
     height: 300px;
+    text-align : center;
 }
 .text-island:hover{
     background-color: #b2dcf5;
