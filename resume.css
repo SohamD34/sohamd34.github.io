@@ -95,40 +95,16 @@ img {
 }
 
 
-/* .circle {
-    width: 75px;
-    height: 75px;
-    line-height: 75px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #000000;
-    margin-left: 70px;
-    background: #43b549;
-    border:black;
-    border-width: 5px;
-    display: inline-flex;
-    text-align: center;
-    margin-block-end: 25px;
-    margin-inline-end: 20px;
-}
-.circle:hover{
-    background: #0d8213;
-    color:#fff;
-} */
-
 .skill-section{
     display: flex;
-    margin-inline: 0px;
+    margin-left: 80px;
+    margin-inline: 50px;
 }
 
 
 *, *:before, *:after {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
    }
-
-.skill-section{
-    margin-left: 80px;
-}
 
 .skills{
     margin-top: 50px;
@@ -174,34 +150,6 @@ img {
     box-shadow: inset 0 0 5px rgba(0,0,0,.2);
   }
 
-
-/* .Experience-title{ 
-    margin-top: 45px;
-    margin-left: 305px;
-    margin-right: 150px;
-    color: #fff;
-    text-align: left;
-    
-}
-
-.Volunteer-title{
-    margin-top: 45px;
-    color: #fff;
-    text-align: center;
-} 
-
-.Experience{
-    color:#93dfee;
-    margin-left: 190px;
-    margin-right: 275px; 
-    text-align: center;
-}
-
-.Volunteer{
-    color: #93dfee;
-    text-align: center;
-}
-*/
 
 .decor-row{
     margin-top: 20px;
