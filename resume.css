@@ -116,7 +116,6 @@ img {
     display: flex;
     margin-inline: 25px;
     margin-right: 0px;
-    width: 310px;
 }
 
 .skills{
@@ -174,6 +173,45 @@ img {
 .decor-row{
     margin-top: 10px;
     display: inline-flex;
+}
+
+.links{
+    color:white;
+    font-size: 15px;
+    margin-left: 150px;
+    text-decoration-color: white;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.resume-button{
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: #1567b4; /* Green */
+    border: none;
+    color: white;
+    text-decoration-color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.button {
+    transition-duration: 0.4s;
+    color:#f2f2f2;
+    font-size: medium;
+}
+
+.button:hover {
+    background-color: #1c1565; /* Green */
+    color: white;
 }
 
 .decorative-element1 {
