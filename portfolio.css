@@ -116,8 +116,8 @@ nav img{
 
 .text-island {
     flex-basis: 50%;
-    /* background-image:"Images/tile-bg.jpg"; */
-    background-color: rgb(241, 255, 246);
+    background: url("C:/Users/91738/sohamd34.github.io/Images/back.png");
+    background-size: 540px;
     padding: 20px;
     margin: 5px;
     border-radius: 5px;
@@ -127,7 +127,6 @@ nav img{
     text-align : center;
 }
 .text-island:hover{
-    background-color: #b2dcf5;
     margin: 2.5px;
     width: 310px;
     height: 310px;
