@@ -119,7 +119,8 @@ nav img{
 
 .text-island {
     flex-basis: 50%;
-    background: url("C:/Users/91738/sohamd34.github.io/Images/back.png");
+    /* background: url("C:/Users/91738/sohamd34.github.io/Images/back.png"); */
+    background-color: #d6d6d6;
     background-size: 540px;
     padding: 20px;
     margin: 5px;
