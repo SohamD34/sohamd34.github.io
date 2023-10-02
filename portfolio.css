@@ -9,14 +9,15 @@
 
 
 body {
-    animation: fadeInAnimation ease 3s;
+    animation: moveIn ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
  
-@keyframes fadeInAnimation {
+@keyframes moveIn {
     0% {
-        opacity: 0.2;
+        background-color: black;
+        opacity: 0;
     }
     100% {
         opacity: 1;
