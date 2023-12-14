@@ -93,16 +93,6 @@ nav img{
     font-family: 'Dancing Script', cursive;
 }
 
-.fixed-side-bar{
-    position: fixed;
-    margin-right: 0px;
-    margin-top: -300px;
-    height: 5px;
-    width: 5px;
-    margin-left: 97%;
-    opacity: 75%;
-}
-
 form {
     max-width: 500px;
     margin-left:150px;
@@ -152,4 +142,97 @@ button {
 
 #msg-box{
     height: 150px;
+}
+
+.logos{
+    margin-left: 1100px;
+    margin-top: -100px;
+}
+
+.logos-ul {
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    display:flex;
+}
+.logos-ul .logos-li {
+    list-style:none;
+}
+.logos-ul .logos-li a {
+    display:block;
+    position:relative;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#404040;
+    margin: 0 30px;
+    transition:.5s;
+}
+.logos-ul .logos-li a span {
+    position:absolute;
+    transition: transform .5s;
+}
+.logos-ul .logos-li a span:nth-child(1),
+.logos-ul .logos-li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:#404040;
+}
+.logos-ul .logos-li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+}
+.logos-ul .logos-li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+}
+  
+.logos-ul .logos-li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+}
+.logos-ul .logos-li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+}
+.logos-ul .logos-li a span:nth-child(2),
+.logos-ul .logos-li a span:nth-child(4){
+    width:3px;
+    height:100%;
+    background:#404040;
+}
+.logos-ul .logos-li a span:nth-child(2) {
+    top:0;
+    left:0;
+    transform:scale(0);
+    transform-origin: bottom;
+}
+.logos-ul .logos-li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+}
+.logos-ul .logos-li a span:nth-child(4) {
+    top:0;
+    right:0;
+    transform:scale(0);
+    transform-origin: top;
+}
+.logos-ul .logos-li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+}
+.logo-img{
+    height: 30px;
+    width: 30px;
 }
