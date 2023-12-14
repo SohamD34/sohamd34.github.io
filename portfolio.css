@@ -3,18 +3,22 @@
     padding:0;
     font-family: 'Roboto Condensed', sans-serif;
 }
-*{
-    box-sizing: border-box;
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url("Images/space.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-
 body {
-    animation: moveIn ease 1.5s;
+    animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
  
-@keyframes moveIn {
+@keyframes fadeInAnimation {
     0% {
         background-color: black;
         opacity: 0;
@@ -24,19 +28,6 @@ body {
      }
 }
 
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url("Images/IMG-20230511-WA0009.jpg");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-a{
-    text-decoration: none;
-    color:rgb(84, 1, 84);
-}
 body::-webkit-scrollbar{
     display: none;
 }
@@ -45,6 +36,7 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 nav img{
     width: 130px;
@@ -60,6 +52,7 @@ nav img{
     padding: 8px 12px;
     position: relative;
 }
+  
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
@@ -78,11 +71,23 @@ nav img{
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
 .title{
     display: block;
     font-size: 25px;
     color:white;
     text-align: center;
+}
+.title-para{
+    display: block;
+    font-size: 15px;
+    color:white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
 }
 
 .decor-row{
@@ -121,35 +126,33 @@ nav img{
 .container-row1 {
     display: flex;
     width: 1400px;
-    height: 500px;
-    margin-top: 30px;
+    height: 200px;
+    margin-top: 130px;
     margin-left: 70px;
-    margin-bottom: -120px;
 }
 
 .container-row2 {
     display: flex;
     width: 1400px;
-    height: 400px;
-    margin-top: 0px;
+    height: 100px;
+    margin-top: 100px;
     margin-left: 70px;
 }
 
-.text-island {
+.text-island1 {
     flex-basis: 50%;
-    /* background: url("C:/Users/91738/sohamd34.github.io/Images/back.png"); */
-    background-color: #d6d6d6;
-    background-size: 540px;
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 300px;
-    height: 300px;
     text-align : center;
 }
-.text-island:hover{
-    margin: 2.5px;
-    width: 310px;
-    height: 310px;
+.text-island2 {
+    flex-basis: 50%;
+    padding: 10px;
+    margin: 5px;
+    text-align : center;
+}
+.title-box{
+    margin-top: -85px;
+    color:#fceb87;
+    font-family: 'Kaushan Script', cursive;
 }
