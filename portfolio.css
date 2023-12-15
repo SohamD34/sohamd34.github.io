@@ -156,3 +156,31 @@ a{
     color:#fceb87;
     font-family: 'Kaushan Script', cursive;
 }
+
+.sep-lines{
+    display:flex;
+}
+.line1{
+    margin-left: 250px;
+    height: 0px;
+    width: 350px;
+    color:white;
+    margin-top: -50px;
+    rotate: 15deg;
+}
+.line2{
+    margin-left: -10px;
+    height: 0px;
+    width: 350px;
+    color:white;
+    margin-top: -50px;
+    rotate: -15deg;
+}
+.line3{
+    margin-left: -10px;
+    height: 0px;
+    width: 350px;
+    color:white;
+    margin-top: -50px;
+    rotate: 15deg;
+}
