@@ -141,13 +141,55 @@ img {
 .Skill-badges{
     text-align: center;
     margin-top: 50px;
+    display: flex;
+    height:180px;
+    color: white;
+    margin-left:50px;
+    margin-right: 50px;
+    border-left: #fff 2px solid;
+    border-right: #fff 2px solid;
+    border-top: #fff 2px solid;
+    border-bottom: #fff 2px solid;
+}
+.skill-title{
+    font-family:'Kaushan Script', cursive;
+}
+.badge{
+    text-align: center;
+    height: 30px;
+}
+
+.Programming-languages{
+    padding-top: 10px;
+    text-align: center;
+    height: 180px;
+    font: 10px;
+    width: 33%;
+    border-right: #fff 2px solid;
+}
+.ML{
+    padding-top: 10px;
+    text-align: center;
+    height: 180px;
+    font: 10px;
+    width: 37%;
+    border-right: #fff 2px solid;
+}
+.Other-dev-tools{
+    padding-top: 10px;
+    text-align: center;
+    height: 180px;
+    font: 10px;
+    width: 33%;
+    margin-left:10px;
+    margin-right: -10px;
 }
 
 .resume-btn{
     font-size: small;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .button {
@@ -159,7 +201,8 @@ img {
     text-align: center;
     text-decoration: none;
     width: 450px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .button {
