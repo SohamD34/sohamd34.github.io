@@ -10,7 +10,7 @@ body {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url('C:/Users/91738/sohamd34.github.io/Images/space.jpg');
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url('../Images/space.jpg');
 }
  
 @keyframes fadeInAnimation {
