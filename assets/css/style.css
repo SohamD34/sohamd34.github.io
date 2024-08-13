@@ -1,13 +1,3 @@
-/*
- * Theme Name: Pixel Perfect Portfolio
- * Author: Pixel Perfect
- * Author URI/Mail: pixelperfectmk@gmail.com
- * Version: 1.0
- */
-
-
-/* CUSTOM RESETS
-================================================== */
 a, button {
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -15,6 +5,10 @@ a, button {
   transition: all 0.25s ease-in-out;
   cursor: pointer;
   outline: 0 none;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
 }
 
 a:hover, a:focus {
@@ -318,7 +312,7 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color: #581e11;
+  background-color: #1f1310;
 }
 
 .site-navigation.affix {
@@ -707,26 +701,31 @@ html, body {
     font-size: 14px;
   }
 }
-
+  
 /* ------------------------------------------------------------------------------------------------------*/
 /* Section: Hello */
 
 .section-hello{
-  background-color: #b4a595;
+  height: 100%;
+  background-color: #ddd3bd;
 }
 
-.section-hello .row {
+.section-hello .container .hello-row {
   margin-top: 70px;
+  width: 100%;
+  background-color: #cfa5a5;
 }
 
 .section-hello .col-sm-4 {
   min-height: 325px;
 }
 
+
 .main-service {
   position: relative;
   padding: 35px 0;
   min-height: 180px;
+  width: 100%;
 }
 
 .main-service .rectangle {
@@ -794,8 +793,8 @@ html, body {
 }
 
 @media only screen and (max-width: 767px) {
-  .section-hello .row {
-    margin-top: 30px;
+  .section-hello .hello-row {
+    margin-top: 80px;
   }
   .section-hello .col-sm-4 {
     min-height: 240px;
@@ -824,10 +823,14 @@ html, body {
 /* Section: About */
 
 .section-about{
-  background-color: #a7a7a7;
+  width:100%;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  url(../img/background.png);
+  background-position: center;
 }
 
 .section-about .container{
+  width: 100%;
   color:rgb(43, 43, 43);
 }
 
@@ -839,7 +842,8 @@ html, body {
   color:rgb(43, 43, 43);
 }
 
-.section-about .row {
+.section-about .job-row {
+  display: flex;
   margin-top: 70px;
 }
 
@@ -867,7 +871,7 @@ html, body {
 }
 
 @media only screen and (max-width: 767px) {
-  .section-about .row {
+  .section-about .job-row {
     margin-top: 30px;
   }
   .section-about .col-xs-6:nth-child(n+3) .feature-about {
@@ -899,20 +903,24 @@ html, body {
   height:350px;
 }
 
-/* Section: Skills */
+/* <-------------------------------------- SKILLS --------------------------------------> */
 
-.site-section .section-skills .container .row .col-sm-6{
+.site-section .section-skills{
   justify-content: space-around;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 00px;
+  margin-right: 00px;
+  width: 100%;
 }
 
 .section-skills {
-  background-color: #f6f6f6;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  url(../img/background.png);
+  background-position: bottom;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-skills h2 {
-  margin-left:-60px;
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 40px;
@@ -922,87 +930,48 @@ html, body {
   text-align: center;
 }
 
-.section-skills p {
-  margin: 10px 0 0;
+.skills-outside-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-row{
+  width: 70%;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-col{
+  margin-left:25px;
 }
 
 .progress-group p {
   margin: 0;
+  text-align: center;
   text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif
 }
 
 .progress-group + .progress-group {
   margin-top: 20px;
 }
 
-.progress {
-  position: relative;
-  margin: 10px 0 0;
-  background-color: #666;
-  border-radius: 0;
-  height: 10px;
-  box-shadow: none;
-  overflow: visible;
-  width: 500px;
-}
-
-.progress-bar {
-  position: relative;
-  background-color: #666;
-  height: 10px;
-}
-
-.progress-bar:before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: -10px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 15px 20px 15px;
-  border-color: transparent transparent #666 transparent;
-  z-index: 2;
-}
-
-.progress-bar:after {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: -10px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 15px 20px 15px;
-  border-color: transparent transparent #f6f6f6 transparent;
-  z-index: 1;
-}
-
-.progress-bar span {
-  width: 40px !important;
-  position: absolute;
-  top: -30px;
-  right: -7px;
-  color: #000;
-  z-index: 3;
-}
-
-.progressbar-back-text {
-  display: none;
-}
 
 @media only screen and (max-width: 767px) {
-  /* Section: Skills */
-  .section-skills .col-sm-6 + .col-sm-6 {
-    margin-top: 40px;
-  }
   .section-skills h2 {
     margin-bottom: 20px;
     font-size: 18px;
   }
 }
 
-/* Section: Counters */
+
+/* <--------------------------------- PROJECTS ---------------------------------> */
+
 .site-section.section-counters {
   padding-bottom: 0;
 }
