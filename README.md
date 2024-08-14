@@ -1,1 +1,1 @@
-Hostname - sohamd34.github.io/home
+Hostname - sohamd34.github.io
