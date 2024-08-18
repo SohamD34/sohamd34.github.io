@@ -68,9 +68,7 @@ html, body {
   border-color: #666;
 }
 
-/* 
- * Rectangle 
- */
+
 .rectangle{
   display: inline-block;
   width: 50px;
@@ -141,9 +139,7 @@ html, body {
   background-color: rgb(202, 202, 202);
 }
 
-/*
- * Slick Slider
- */
+
 .slick-slider {
   position: relative;
   -khtml-user-select: none;
@@ -622,7 +618,7 @@ html, body {
   margin: 15px 0 0;
   font-size: 16px;
   line-height: 16px;
-  color: #3d3d3d;
+  color: #fff8f8;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -636,7 +632,7 @@ html, body {
   display: inline-block;
   content: '';
   height: 1px;
-  background-color: #666;
+  background-color: #ffffff;
   width: 20px;
   position: absolute;
   top: 50%;
@@ -707,7 +703,9 @@ html, body {
 
 .section-hello{
   height: 100%;
-  background-color: #ddd3bd;
+  background-image: url(/home/soham/Desktop/sohamd34.github.io/assets/img/wood-image.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-hello .container .hello-row {
@@ -754,15 +752,15 @@ html, body {
 
 .main-service h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .main-service h6 {
   margin: 25px 0 0;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -824,18 +822,23 @@ html, body {
 
 .section-about{
   width:100%;
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  background-image: linear-gradient(rgb(94, 95, 95), rgba(146, 248, 243, 0.753)),
   url(../img/background.png);
-  background-position: center;
+  background-position: top;
 }
 
 .section-about .container{
   width: 100%;
-  color:rgb(43, 43, 43);
+  color:rgb(0, 0, 0);
+  margin-bottom: -50px;
 }
 
 .section-about .container h2{
-  color:rgb(43, 43, 43);
+  color:rgb(255, 255, 255);
+}
+
+.section-about .container p{
+  color:rgb(255, 255, 255);
 }
 
 .section-about .container{
@@ -853,6 +856,7 @@ html, body {
 
 .section-about .rectangle {
   margin: 15px auto 10px;
+  margin-bottom: 0px;
 }
 
 .section-about .rectangle i {
@@ -913,22 +917,23 @@ html, body {
 }
 
 .section-skills {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  background-image: linear-gradient(rgba(146, 248, 243, 0.753), rgb(69, 196, 255)),
   url(../img/background.png);
   background-position: bottom;
   justify-content: center;
   align-items: center;
 }
 
-.section-skills h2 {
-  position: relative;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
-  font-size: 36px;
-  color: #000;
-  text-transform: uppercase;
-  text-align: center;
+#projects-title{
+  width: 100%;
 }
+
+.section-skills h2{
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
 
 .skills-outside-container{
   width: 100%;
@@ -938,8 +943,8 @@ html, body {
 }
 
 .skills-row{
+  padding-top: 25px;
   width: 70%;
-  /* background-color: #fff; */
   display: flex;
   justify-content: space-between;
 }
@@ -1018,14 +1023,27 @@ html, body {
   }
 }
 
-/* Section: Services */
+
+#projects{
+  background: linear-gradient(rgb(69, 196, 255), #0a0066);
+  height: 1150px;
+  color: white;
+}
+
+#project-subtitle{
+  color:#000;
+}
+
+
 .section-services.site-section {
   padding: 0;
   background-color: #f6f6f6;
 }
 
 .section-services .container-fluid {
-  padding: 100px 15px 70px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 80px;
   background-color: #ffffff;
 }
 
