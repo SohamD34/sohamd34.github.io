@@ -1,201 +1,159 @@
-$(function () {    
-// Navigation 
-    $('.site-navigation').affix({
-      offset: {
-        top: $('.hero').height()
-            }
-    });
+'use strict';
 
-    var $window = $(window);
-    function checkWidth() {
-        var windowsize = $window.width();
-        if (windowsize < 768) {
-            $('.nav a').on('click', function(){
-                $('.navbar-toggle').click() //bootstrap 3.x by Richard
-            });
-        }
+
+
+// element toggle function
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+
+
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+
+
+// testimonials variables
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+
+// modal variable
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+// modal toggle function
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+// add click event to all modal items
+for (let i = 0; i < testimonialsItem.length; i++) {
+
+  testimonialsItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    testimonialsModalFunc();
+
+  });
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
+
+
+
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
     }
-    // Execute on load
-    checkWidth();
-    // Bind event listener
-    $(window).resize(checkWidth);
 
-// Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.site-header',
-        offset: 10
-    });
+  }
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
-    $(document).on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1000, 'easeInOutExpo');
-        event.preventDefault();
-    });
+}
 
-//Counters 
-    if ($(".counter-start").length>0) {
-        $(".counter-start").each(function() {
-            var stat_item = $(this),
-            offset = stat_item.offset().top;
-            $(window).scroll(function() {
-                if($(window).scrollTop() > (offset - 1000) && !(stat_item.hasClass('counting'))) {
-                    stat_item.addClass('counting');
-                    stat_item.countTo();
-                }
-            });
-        });
-    };
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
 
 
-// Progress bar 
-    var $section = $('.section-skills');
-    function loadDaBars() {
-        $('.progress .progress-bar').progressbar({
-            transition_delay: 500,
-            display_text: 'center'
-        });
-    }
-    
-    $(document).bind('scroll', function(ev) {
-        var scrollOffset = $(document).scrollTop();
-        var containerOffset = $section.offset().top - window.innerHeight;
-        if (scrollOffset > containerOffset) {
-            loadDaBars();
-            // unbind event not to load scrolsl again
-            $(document).unbind('scroll');
-        }
-    });
 
-//Team Carousel
-    $('#services-carousel').carousel({ interval: false });
+// contact form variables
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
 
-    // Carousel touch support
-    if($(".carousel-inner").length) {
-        $(".carousel-inner").swipe({
-            //Generic swipe handler for all directions
-            swipeLeft: function (event, direction, distance, duration, fingerCount) {
-                $(this).parent().carousel('next');
-            },
-            swipeRight: function () {
-                $(this).parent().carousel('prev');
-            },
-            //Default is 75px, set to 0 for demo so any distance triggers swipe
-            threshold: 50
-        });
+// add event to all form input field
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
     }
 
-// Slick.js   
-    $('.review-carousel').slick({
-        nextArrow: '<button class="slick rectangle slick-next"><i class="fa fa-angle-right" aria-hidden="true"></button>',
-        prevArrow: '<button class="slick rectangle slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></button>'
-    });
+  });
+}
 
-    $('.clients-carousel').slick({
-        arrows: false,
-        slidesToShow: 5,
-        responsive: [ {
-            breakpoint : 992,
-            settings: {
-                slidesToShow: 2
-            }
-        },
-        {
-            breakpoint : 480,
-            settings: {
-                slidesToShow: 1
-            }
-      }]
-    });
 
-//shuffle.js
-    var shuffleme = (function( $ ) {
-      'use strict';
-          var $grid = $('#grid'), //locate what we want to sort 
-          $filterOptions = $('.portfolio-sorting li'),  //locate the filter categories
 
-      init = function() {
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
 
-        // None of these need to be executed synchronously
-        setTimeout(function() {
-          listen();
-          setupFilters();
-        }, 100);
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
 
-        // instantiate the plugin
-        $grid.shuffle({
-          itemSelector: '[class*="col-"]', 
-           group: Shuffle.ALL_ITEMS, 
-        });
-      },
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
 
-        
-      // Set up button clicks
-      setupFilters = function() {
-        var $btns = $filterOptions.children();
-        $btns.on('click', function(e) {
-          e.preventDefault();
-          var $this = $(this),
-              isActive = $this.hasClass( 'active' ),
-              group = isActive ? 'all' : $this.data('group');
-
-          // Hide current label, show current label in title
-          if ( !isActive ) {
-            $('.portfolio-sorting li a').removeClass('active');
-          }
-
-          $this.toggleClass('active');
-
-          // Filter elements
-          $grid.shuffle( 'shuffle', group );
-        });
-
-        $btns = null;
-      },
-
-      // Re layout shuffle when images load. This is only needed
-      // below 768 pixels because the .picture-item height is auto and therefore
-      // the height of the picture-item is dependent on the image
-      // I recommend using imagesloaded to determine when an image is loaded
-      // but that doesn't support IE7
-      listen = function() {
-        var debouncedLayout = $.throttle( 300, function() {
-          $grid.shuffle('update');
-        });
-
-        // Get all images inside shuffle
-        $grid.find('img').each(function() {
-          var proxyImage;
-
-          // Image already loaded
-          if ( this.complete && this.naturalWidth !== undefined ) {
-            return;
-          }
-
-          // If none of the checks above matched, simulate loading on detached element.
-          proxyImage = new Image();
-          $( proxyImage ).on('load', function() {
-            $(this).off('load');
-            debouncedLayout();
-          });
-
-          proxyImage.src = this.src;
-        });
-
-        // Because this method doesn't seem to be perfect.
-        setTimeout(function() {
-          debouncedLayout();
-        }, 500);
-      };      
-
-      return {
-        init: init
-      };
-    }( jQuery ));
-
-    if($('#grid').length >0 ) { 
-      shuffleme.init(); //filter portfolio
-    };
-}());
+  });
+}
