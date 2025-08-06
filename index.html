@@ -10,7 +10,7 @@
 
 <body>
     <!-- Animated background -->
-    <div class="bg-particles" id="particles"></div>
+    <div class="bg-particles streak" id="particles"></div>
 
     <!-- Navigation -->
     <nav id="navbar">
@@ -188,17 +188,18 @@
                 <h3>Speech-Based Alzheimer's Detection</h3>
                 <p>Developed a speech-based Alzheimer's detection system using CNNs for classification of binary-masked GradCAM outputs of audio spectrograms.</p>
                 <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
                     <span class="skill-tag">Speech and Audio Processing</span>
                     <span class="skill-tag">Deep Learning</span>
                 </div>
             </a>
 
 
-            <a class="card" href="https://github.com/SohamD34/Recommerce" target="_blank" style="text-decoration: none; color: inherit;">
-                <h3>E-commerce Recommendation System</h3>
-                <p>A Flask-based e-commerce app with a consumer recommendation using content-based, collaborative filtering, hybrid approaches.</p>
+            <a class="card" href="https://github.com/SohamD34/shopx" target="_blank" style="text-decoration: none; color: inherit;">
+                <h3>ShopX</h3>
+                <p> Full-stack e-commerce platform built using the MERN stack, providing features for both customers and administrators.</p>
                 <div class="skills">
-                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">React, Express, Node.js, MongoDB, JWT</span>
                 </div>
             </a>
 
@@ -214,6 +215,7 @@
                 <h3>Posture Detection in Videos</h3>
                 <p>Posture detection in videos using Optical Flow detection models like Lucas Kanade, Horn Schunk and deep learning-based approaches like PoseNet and Mediapipe PoseDetector.</p>
                 <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
                     <span class="skill-tag">OpenCV</span>
                     <span class="skill-tag">MediaPipe</span>
                 </div>
@@ -227,6 +229,17 @@
                     <span class="skill-tag">PyTorch Geometric</span>
                 </div>
             </a>
+
+            <a class="card" href="https://github.com/SohamD34/VeriGen" target="_blank" style="text-decoration: none; color: inherit;">
+                <h3>VeriGen</h3>
+                <p>Finetuning SOTA Large Language Models for Verilog (VHDL) code generation, syntax and logic error detection and correction.</p>
+                <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Huggingface</span>
+                    <span class="skill-tag">LoRA</span>
+                </div>
+            </a>
+
         </div>
 
         <!-- Creative Reveal Buttons -->
@@ -363,6 +376,8 @@
         </div>
     </section>
 
+
+    
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -421,17 +436,48 @@
             }
         }
 
-        // Initialize particles
         createParticles();
 
-        // Form submission handler
+        function createComet() {
+            const container = document.getElementById('particles');
+            const comet = document.createElement('div');
+            comet.className = 'comet';
+            
+            // Random starting position along the top and left edges
+            const startSide = Math.random() > 0.5 ? 'top' : 'left';
+            if (startSide === 'top') {
+                comet.style.left = Math.random() * 100 + '%';
+                comet.style.top = '-50px';
+            } else {
+                comet.style.left = '-50px';
+                comet.style.top = Math.random() * 100 + '%';
+            }
+            
+            container.appendChild(comet);
+            
+            setTimeout(() => {
+                if (comet.parentNode) {
+                    comet.parentNode.removeChild(comet);
+                }
+            }, 4000);
+        }
+
+        function scheduleNextComet() {
+            const delay = Math.random() * 7000 + 4000; // 8-15 seconds
+            setTimeout(() => {
+                createComet();
+                scheduleNextComet(); 
+            }, delay);
+        }
+
+        scheduleNextComet();
+
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your message! I\'ll get back to you soon.');
             this.reset();
         });
 
-        // Add hover effects to cards
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) rotateX(5deg)';
@@ -442,7 +488,6 @@
             });
         });
 
-        // Hidden sections functionality
         function showSection(sectionId) {
             const section = document.getElementById(sectionId);
             const button = document.getElementById('show' + sectionId.charAt(0).toUpperCase() + sectionId.slice(1));
@@ -450,7 +495,6 @@
             section.classList.add('show');
             button.classList.add('active');
             
-            // Smooth scroll to section
             setTimeout(() => {
                 section.scrollIntoView({
                     behavior: 'smooth',
@@ -466,23 +510,19 @@
             section.classList.remove('show');
             button.classList.remove('active');
             
-            // Scroll back to projects section
             document.getElementById('projects').scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
         }
 
-        // Add event listeners for reveal buttons
         document.getElementById('showPhotography').addEventListener('click', () => showSection('photography'));
         document.getElementById('showPoetry').addEventListener('click', () => showSection('poetry'));
 
-        // Logo click handler
         document.querySelector('.logo').addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Photo gallery click handler
         document.querySelectorAll('.photo-item').forEach(item => {
             item.addEventListener('click', function() {
                 alert('Photo gallery feature - replace with your actual photos and lightbox functionality!');
