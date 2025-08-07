@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soham's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins&family=Roboto+Slab:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 
 
@@ -15,7 +18,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Soham</div>
+            <div class="logo">Caesar</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -30,10 +33,12 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Soham Deshmukh</h1>
-            <p>AI Engineer | Developer | Poet</p>
+            <br>
+            <h3>AI_Engineer <span style="color: #ad6a3e;">&&</span> Developer <span style="color: #ad6a3e;">&&</span> Poet;</h3>
             <br>
             <br>
-            <p>Quote to live by - <i></i> </p>
+            <p><i>"Believe in yourself when no one else does. Set your heart ablaze."</i> </p>
+            <br>
             <a href="#projects" class="cta-button">Explore My Work</a>
         </div>
     </section>
@@ -42,12 +47,24 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="card">
-            <p>I'm a Machine Learning enthusiast, and a recent graduate from IIT Jodhpur with B.Tech. in Electrical Engineering. Working with data, distributions and algorithms is my dopamine. Finetuning and optimising models, processes and pipelines is my labor of love. </p>
+            <p>I'm Soham (bu), and a recent graduate from IIT Jodhpur with B.Tech. in Electrical Engineering. Working with data, distributions and algorithms is my dopamine. Finetuning and optimising models, processes and pipelines is my labor of love. </p>
             <br>
             <p>I use data-driven insights to make fun and scalable ML (statistical, DL and GenAI) solutions across domains - healthcare, biosensors, edtech, career counselling. I am currently tinkering with Large Language Models (LLMs) and Large Audio Models (LAMs).</p>
             <br>
             <p>When I'm not coding or working on engineering projects, you'll find me capturing moments through my lens or crafting verses that reflect the beauty and complexity of our world.</p>
         </div>
+
+        <div class="columns">
+            <div class="card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam corporis tempore suscipit ullam vel nobis laborum, itaque perspiciatis nemo rem explicabo quod provident vero molestias facilis deleniti vitae ad autem.</p>
+            </div>
+            
+            <div class="card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam corporis tempore suscipit ullam vel nobis laborum, itaque perspiciatis nemo rem explicabo quod provident vero molestias facilis deleniti vitae ad autem.</p>
+            </div>
+
+        </div>
+        
     </section>
 
 
@@ -63,11 +80,13 @@
                 <br>
                 <span class="skill-tag">HTML/CSS</span>
                 <span class="skill-tag">R</span>
+                <span class="skill-tag">Assembly (basic)</span>
             </div>
             <div class="card">
                 <h3>Web Development</h3>
                 <span class="skill-tag">Flask</span>
                 <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Express.js</span>
                 <span class="skill-tag">React</span>
                 <span class="skill-tag">Node.js</span>
                 <span class="skill-tag">Nest.js</span>
@@ -77,8 +96,8 @@
                 <h3>ML Frameworks</h3>
                 <span class="skill-tag">TensorFlow</span>
                 <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">transformers</span>
                 <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">transformers</span>
                 <span class="skill-tag">LangChain</span>
                 <span class="skill-tag">FastAPI</span>
                 <br>
@@ -99,6 +118,7 @@
                 <span class="skill-tag">Jupyter</span>
                 <br>
                 <span class="skill-tag">Visual Studio</span>
+                <span class="skill-tag">Postgre-Admin</span>
             </div>
         </div>
     </section>
@@ -163,8 +183,8 @@
                 <p>Co-authored and presented the paper "Smartwatch-driven Architecture for Forecasting Personalized Optimal Sleep Duration" at Indian Conference on MedTech Innovations (ICMI) 2024.</p>
             </div>
             <div class="card">
-                <h3>Global Top 100</h3>
-                <p>Ranked in the global top 100 (sub-80 rank) on deep-ml platform leaderboard.</p>
+                <h3>Global Top 50</h3>
+                <p>Ranked in the global top 50 on deep-ml platform leaderboard.</p>
             </div>
         </div>
     </section>
@@ -246,11 +266,11 @@
         <div class="reveal-buttons">
             <button class="reveal-btn" id="showPhotography">
                 <span class="icon">📸</span>
-                <span>Discover My Photography</span>
+                <span>Clicks</span>
             </button>
             <button class="reveal-btn" id="showPoetry">
                 <span class="icon">✍️</span>
-                <span>Read My Poetry</span>
+                <span>Scribbles</span>
             </button>
         </div>
     </section>
@@ -258,79 +278,344 @@
     <!-- Photography Section (Hidden) -->
     <section id="photography" class="hidden-section">
         <div class="close-btn" onclick="hideSection('photography')">×</div>
-        <h2>Photography</h2>
+        <h2>Frames</h2>
         <p style="text-align: center; margin-bottom: 2rem; color: #b8c5d6;">Capturing moments, telling stories through the lens</p>
         
         <div class="photo-grid">
             <div class="photo-item">
-                <div class="photo-placeholder">📸</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152522.jpg" alt="">
+                </div>
             </div>
             <div class="photo-item">
-                <div class="photo-placeholder">🌅</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152541.jpg" alt="">
+                </div>
             </div>
             <div class="photo-item">
-                <div class="photo-placeholder">🏔️</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152559.jpg" alt="">
+                </div>
             </div>
             <div class="photo-item">
-                <div class="photo-placeholder">🌸</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152609.jpg" alt="">
+                </div>
             </div>
             <div class="photo-item">
-                <div class="photo-placeholder">🌃</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152623.jpg" alt="">
+                </div>
             </div>
             <div class="photo-item">
-                <div class="photo-placeholder">📷</div>
+                <div class="photo-placeholder">
+                    <img src="clicks/IMG_20250807_152638.jpg" alt="">
+                </div>
             </div>
         </div>
         
         <p style="text-align: center; margin-top: 2rem; color: #40e0d0; font-style: italic;">
-            Replace placeholder icons with your actual photographs
+            "Photography is an austere and blazing poetry of the real." ~ Ansel Adams
         </p>
     </section>
 
     <!-- Poetry Section (Hidden) -->
     <section id="poetry" class="hidden-section">
         <div class="close-btn" onclick="hideSection('poetry')">×</div>
-        <h2>Poetry</h2>
+        <h2>Verses from my Pen...</h2>
         <p style="text-align: center; margin-bottom: 2rem; color: #b8c5d6;">Words that dance, emotions that sing</p>
         
-        <!-- <div class="poem">
-            <div class="poem-title">Digital Dreams</div>
-            <p>In circuits deep and code so bright,<br>
-            Where logic meets the realm of light,<br>
-            I craft the future, line by line,<br>
-            Where human heart and tech combine.<br><br>
-            
-            Each function call, a whispered prayer,<br>
-            Each algorithm, beyond compare,<br>
-            In this digital symphony,<br>
-            I find my true identity.</p>
+        <div class="poems-grid">
+            <div class="poem" onclick="openPoemModal('poem1')">
+                <div class="poem-title">The Way Within</div>
+            </div>
+
+            <div class="poem" onclick="openPoemModal('poem5')">
+                <div class="poem-title">Perspective</div>
+            </div>
+
+            <div class="poem" onclick="openPoemModal('poem2')">
+                <div class="poem-title">Forsaken</div>
+            </div>
+
+            <div class="poem" onclick="openPoemModal('poem3')">
+                <div class="poem-title">Providence</div>
+            </div>
+
+            <div class="poem" onclick="openPoemModal('poem4')">
+                <div class="poem-title">I see you</div>
+            </div>
         </div>
 
-        <div class="poem">
-            <div class="poem-title">Through the Lens</div>
-            <p>Moments frozen, time stands still,<br>
-            Captured light bends to my will,<br>
-            Stories told in frame and hue,<br>
-            Each photograph a world anew.<br><br>
-            
-            Shadows dance with golden rays,<br>
-            Memory lives through all my days,<br>
-            In every click, a heartbeat caught,<br>
-            Beauty found where it's least sought.</p>
+        <!-- Poem Modals -->
+        <div id="poem1" class="poem-modal">
+            <div class="poem-content">
+                <div class="modal-close" onclick="closePoemModal('poem1')">×</div>
+                <div class="poem-title">The Way Within</div>
+                <p>Thought I found a way out <br>
+                    Hidden within me or without.<br>
+                    To leave a maze of emotions<br>
+                    Of expectations and delusions.<br>
+                    <br>
+                    For I could see the beacon<br>
+                    I couldn't think or soundly reason<br>
+                    The treacherous thorns and aching<br>
+                    That adorned the path I was undertaking<br>
+                    <br>
+                    My mind full of thoughts<br>
+                    'bout the destination and nought<br>
+                    I took a dash into the unclear<br>
+                    Hope had overcome all fear.<br>
+                    <br>
+                    Such is the mystery of life<br>
+                    Misery wipes off love and strife<br>
+                    It wraps you in its own clutch<br>
+                    The mind can't surmise much.<br>
+                    <br>
+                    My bare feet felt numb<br>
+                    As I scurried along - steps long - they thumped.<br>
+                    Like chisels plunged into my heel,<br>
+                    The thorns tore apart my peel.<br>
+                    <br>
+                    All this - for nought but vain,<br>
+                    The flare did some distance gain.<br>
+                    It seemed to never close in,<br>
+                    No matter the efforts I had put in.<br>
+                    <br>
+                    And so, I stood, at the very same place<br>
+                    Amidst the same maze, wrapped by haze.<br>
+                    My confused mind had not let me move<br>
+                    Stuck like an ill-fated in a marshy grove.<br>
+                    <br>
+                    Such is the way - a little absurd,<br>
+                    I bet - you can have my word,<br>
+                    That a worried mind won't let you grow,<br>
+                    Never mind the resilience you show.<br>
+                    <br>
+                    The mist of worries and woes,<br>
+                    Covers every path you wish to go,<br>
+                    It all takes but a clear mind and a start<br>
+                    That shows the way, drives the stucks apart.
+                </p>
+            </div>
         </div>
 
-        <div class="poem">
-            <div class="poem-title">The Engineer's Canvas</div>
-            <p>Between the blueprint and the dream,<br>
-            Where nothing is quite what it seems,<br>
-            I paint with data, sketch with code,<br>
-            Build bridges on this digital road.<br><br>
-            
-            Art and science intertwined,<br>
-            In the landscape of my mind,<br>
-            Creating worlds both real and vast,<br>
-            Where future meets the storied past.</p>
-        </div> -->
+        <div id="poem5" class="poem-modal">
+            <div class="poem-content">
+                <div class="modal-close" onclick="closePoemModal('poem5')">×</div>
+                <div class="poem-title">Perspective</div>
+                <p>Caged into custody, with no remedy.<br>
+                In a quod of mirror.<br>
+                Left with nothing but fear.<br>
+                <br>
+                For the lack of a way, in or out,<br>
+                No hope of escape - <br>
+                Within or without.<br>
+                <br>
+                He noticed, as he looked 'round the cage,<br>
+                All he could see was mirrors.<br>
+                Strange thing - they all shone his image.<br>
+                <br>
+                Even stranger - mirrors he had his back to -<br>
+                A kind of thing he'd horror to -<br>
+                Still wore his countenance.<br>
+                <br>
+                Each face had a different trait,<br>
+                Some reflected hordes of emotions,<br>
+                Some were gentle and straight.<br>
+                <br>
+                He noticed amongst 'em all,<br>
+                In one, he was a man -<br>
+                Happy, cheerful and entralled.<br>
+                <br>
+                The very next was a stark contrast,<br>
+                For it portrayed him in the dark -<br>
+                Sad, deprived and all snark.<br>
+                <br>
+                The opposite was the most humane of all,<br>
+                It showed his rude and arrogant side,<br>
+                The kind of devil, that within resides.<br>
+                <br>
+                One was a braggart - his wealth, his talk<br>
+                Another - well that's a bit of a pun.<br>
+                He was humble as a praying nun.<br>
+                <br>
+                At every angle, the impression seemed to change,<br>
+                For 'twas nought but how his thoughts arranged,<br>
+                To suit his need at every moment.<br>
+                <br>
+                For they were mirrors - not ordinary,<br>
+                They showed a man his own story,<br>
+                Through the eyes of those, he had acquainted.<br>
+                <br>
+                When they say, this is what they mean,<br>
+                That the difference is how you perceive.<br>
+                For it all lies in the perspective.</p>
+            </div>
+        </div>
+
+
+        <div id="poem2" class="poem-modal">
+            <div class="poem-content">
+                <div class="modal-close" onclick="closePoemModal('poem2')">×</div>
+                <div class="poem-title">Forsaken</div>
+                <p>The room's lit dark and stark<br>
+                Abandoned by men, bears nobody's mark.<br>
+                And still methinks to hear a harp,<br>
+                Shrill notes, screeching, piercing sharp.<br>
+                They're swords, tearing my soul apart,<br>
+                As they pour down the depths of my heart.<br>
+                Clouded amidst the haze of murk,<br>
+                The sounds intrust the eminent sulk.<br>
+                So much familiar, yet unknown<br>
+                Concealing that, what is not yet shown.<br>
+                My feet- they stumble, as I step into the room,<br> 
+                It wraps around me as I embrace the gloom.<br>
+                Breaks the trans, a searing sting.<br>
+                It hurts not my peel but the soul within<br>
+                It leaves no mark that men can see.<br>
+                And leaves no heart where trust can be.<br>
+                But no hope, no succor, all distant stars<br>
+                No cure, no spell to heal the scars.<br>
+                On my knees, I beg and pray,<br>
+                Beseech the sun, beseech a beam stray.<br>
+                On my knees, with battered faith<br>
+                Distraught, fraught, in disdain<br>
+                A wounded spirit amidst the fading light<br>
+                I resign to my destined plight.</p>
+            </div>
+        </div>
+
+        <div id="poem3" class="poem-modal">
+            <div class="poem-content">
+                <div class="modal-close" onclick="closePoemModal('poem3')">×</div>
+                <div class="poem-title">Providence</div>
+                <p>The hands seethe and burn,<br>
+                His brow bleeds streams of sweat<br>
+                The fissures on his heels<br>
+                Akin the mud cracks<br>
+                Both seeking nurture.<br>
+                Seeking the shower of grace.<br>
+                His feet waddle.<br>
+                Bare on the barren<br>
+                The only shade in sight<br>
+                His own shadow <br>
+                Trailing on his incessant pursuit.<br>
+                The black in his eyes <br>
+                Blackened by the lustre,<br>
+                At the blue ceiling<br>
+                He gazes in expectation.<br>
+                An odd blob in the arid<br>
+                Streams down the cheeks<br>
+                As it drops to the ground<br>
+                Disappears.<br>
+                Like his hopes and prayers.<br>
+                <br>
+                He saunters across the greens,<br>
+                Lush underneath his feet.<br>
+                The breezes whistle, <br>
+                Misty and soothing<br>
+                Against the warmth of his cheeks.<br>
+                His hands graze the reap,<br>
+                Tall against the winds,<br>
+                Their bristling spirits<br>
+                Infusing his palm with glee.<br>
+                The black in his eyes <br>
+                Moist with gratitude<br>
+                At the dark ceiling<br>
+                He gazes in admiration.<br>
+                A speck of drizzle<br>
+                Feathers his cheek<br>
+                Like a tender kiss from heaven<br>
+                His heels and soles<br>
+                Embrace the mire,<br>
+                Soaking in the mist, the blessings <br>
+                Of Nature.</p>
+            </div>
+        </div>
+
+        <div id="poem4" class="poem-modal">
+            <div class="poem-content">
+                <div class="modal-close" onclick="closePoemModal('poem4')">×</div>
+                <div class="poem-title">I See You</div>
+                <p>i see you<br>
+                    sun rays gleaming<br>
+                    illuminated by your radiance<br>
+                    the still smile on your face<br>
+                    the silk of your cheeks <br>
+                    caressing the breeze<br>
+                    silky strands of hair riding the wind<br>
+                    as you sit by the window<br>
+                    <br>
+                    i sit afar...content..<br>
+                    my heart warm<br>
+                    my feet cold<br>
+                    my brain alive<br>
+                    my soul so old<br>
+                    <br>
+                    i remember the days<br>
+                    we rode together along the bays<br>
+                    i'd see you<br>
+                    the same still smile on your face<br>
+                    the cool breeze soothing the burn in my heart<br>
+                    yet never soothing the sore aching<br>
+                    as our ways did part<br>
+                    <br>
+                    you'd jump and scream <br>
+                    as we laughed off our silly ways<br>
+                    and i'd silently wish, <br>
+                    your smile be the spring, that always remains<br>
+                    in my heart<br>
+                    for my heart.<br>
+                    alas, it remained only in my heart.<br>
+                    fates crashed, we have drifted apart.<br>
+                    <br>
+                    hate, rage is not what i feel<br>
+                    somewhere, somehow <br>
+                    i've started to heal<br>
+                    alas, what remains of us is<br>
+                    you and me <br>
+                    and the memories in my soul<br>
+                    of how your presence did feel<br>
+                    i ain't bitter<br>
+                    i just wish it'd turned out better.<br>
+                    <br>
+                    i see you everyday<br>
+                    in the warmth of the sun <br>
+                    in the shower of its rays<br>
+                    i pray <br>
+                    i shuffle on my seat<br>
+                    in the desperate hope<br>
+                    i catch a glimpse of you<br>
+                    a fleeting one albeit<br>
+                    <br>
+                    i hope<br>
+                    there had been a noon<br>
+                    that i sit next to you <br>
+                    as you drift off to sleep's land<br>
+                    close to my heart, your hand<br>
+                    that you rest your head<br>
+                    on my shoulder<br>
+                    as i behold you, you shudder<br>
+                    as the silk of your cheeks <br>
+                    caresses the breeze<br>
+                    and i wrap you in my embrace.<br>
+                    <br>
+                    till then<br>
+                    i'd cherish that smile<br>
+                    i'd see you from afar<br>
+                    hoping<br>
+                    you sit by the window<br>
+                    sun rays gleaming<br>
+                    illuminated by your radiance<br>
+                    and that everyday<br>
+                    i see you.<br>
+                </p>
+            </div>
+        </div>
+
+        
+
     </section>
 
     <!-- Contact Section -->
@@ -377,7 +662,7 @@
     </section>
 
 
-    
+
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -463,7 +748,7 @@
         }
 
         function scheduleNextComet() {
-            const delay = Math.random() * 7000 + 4000; // 8-15 seconds
+            const delay = Math.random() * 7000; 
             setTimeout(() => {
                 createComet();
                 scheduleNextComet(); 
@@ -550,6 +835,37 @@
             setTimeout(() => {
                 typeWriter(heroTitle, originalText, 150);
             }, 1000);
+        });
+
+        // Poem modal functions
+        function openPoemModal(poemId) {
+            const modal = document.getElementById(poemId);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closePoemModal(poemId) {
+            const modal = document.getElementById(poemId);
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside the content
+        document.querySelectorAll('.poem-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closePoemModal(modal.id);
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.poem-modal.show').forEach(modal => {
+                    closePoemModal(modal.id);
+                });
+            }
         });
     </script>
 </body>
